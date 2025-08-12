@@ -1,297 +1,354 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
+    <meta name="charset" content="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""/>
     <link
             rel="stylesheet"
             as="style"
             onload="this.rel='stylesheet'"
-            href="https://fonts.googleapis.com/css2?display=swap&amp;family=Poppins%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+            href="https://fonts.googleapis.com/css2?display=swap&amp;family=Poppins%3Awght%40400%3B500%3B700%3B900"
     />
-
-    <title>TourneyBit</title>
+    <title>TourneyBit - The competition platform for sports and esports</title>
+    <meta name="description"
+          content="Run your competitions and sporting events with the competition and events platform designed from the ground up for the sports and esports industries. Deploy our secure and integration-ready BYOC platform to your own infrastructure with your own branding and customizations. Book a demo today and own your competition with TourneyBit!"/>
+    <meta name="og:site_name" content="TourneyBit"/>
+    <meta property="og:type" content="website"/>
+    <!-- TODO -->
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,"/>
-    <meta name="description" content="TODO"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="charset" content="UTF-8"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://www.tourneybit.com",
+            "logo": "https://www.tourneybit.com/images/TourneyBit-Logo.png",
+            "name": "TourneyBit LLC",
+            "description": "TourneyBit provides software and services to the sports and esports industries for running competitions and sporting events",
+            "email": "hello@tourneybit.com",
+            "telephone": "+12159994940",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1500 Chestnut St. Suite 2 #1604",
+                "addressLocality": "Philadelphia",
+                "addressCountry": "US",
+                "addressRegion": "Pennsylvania",
+                "postalCode": "19102"
+            },
+            "duns": "118571930"
+        }
+    </script>
+    <style>
+        @media screen and (prefers-reduced-motion: no-preference) {
+            @keyframes fade-in {
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            .fade-in-long {
+                opacity: 0;
+                transform: translateY(10px);
+                animation: fade-in 0.65s ease-out forwards;
+                display: inline-block;
+            }
+
+            .fade-in {
+                opacity: 0;
+                transform: translateY(5px);
+                animation: fade-in 0.5s ease-out forwards;
+                display: inline-block;
+            }
+
+            @keyframes reveal {
+                0% {
+                    opacity: 0.95;
+                }
+                to {
+                    opacity: 1;
+                    max-width: 32ch;
+                    display: inline;
+                }
+            }
+
+            .reveal, .reveal-next {
+                opacity: 0;
+                max-width: 1px;
+                white-space: nowrap;
+                overflow: hidden;
+                margin-left: 5px;
+            }
+
+            .reveal {
+                animation: reveal 1s linear forwards;
+            }
+
+            @keyframes reveal-next {
+                0% {
+                    opacity: 0.95;
+                }
+                to {
+                    opacity: 1;
+                    max-width: 37ch;
+                    display: inline;
+                }
+            }
+
+            .reveal-next {
+                animation: reveal-next 1s linear forwards;
+            }
+
+            @keyframes scale {
+                0%, 100% {
+                    transform: none;
+                }
+                50% {
+                    transform: scale(1.03);
+                }
+            }
+
+            .scale {
+                animation: scale 1s ease-in-out;
+            }
+
+            a.button, button {
+                transition: transform 0.25s ease-in-out;
+            }
+
+            a.button:hover, button:hover {
+                transform: scale(1.03);
+            }
+
+            .scale-slight {
+                transition: transform 0.25s ease-in-out;
+            }
+
+            .scale-slight:active, .scale-slight:hover {
+                transform: scale(1.01);
+            }
+        }
+
+        .background-bracket {
+            background-blend-mode: color-dodge;
+            background-image: url(/images/bracket.webp);
+            background-position-x: right;
+            background-position-y: bottom;
+            background-repeat: repeat;
+            background-size: 360px;
+        }
+    </style>
 </head>
-<body>
-<div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
-     style='font-family: Poppins, "Lexend", sans-serif;'>
-    <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f5f0f1] px-10 py-3">
-            <div class="flex items-center gap-2 text-[#181113] cursor-default">
-                <svg class="size-6 shadow-lg" xmlns="http://www.w3.org/2000/svg" width="265" height="273"
-                     viewBox="0 0 265 273"
-                     fill="none">
-                    <rect width="265" height="273" fill="#FFFEFE"/>
-                    <g filter="url(#filter0_d_0_1)">
-                        <rect x="12" y="7" width="239" height="249" fill="#181113"/>
-                    </g>
-                    <path d="M0.5 70.8333L162 70.8333" stroke="#FFFEFE" stroke-width="40"/>
-                    <line x1="142.003" y1="212.003" x2="142.003" y2="62" stroke="#FFFEFE" stroke-width="40"/>
-                    <path d="M1 205.917H162" stroke="#FFFEFE" stroke-width="40"/>
-                    <line x1="124.997" y1="141.5" x2="199.997" y2="141.5" stroke="#FFFEFE" stroke-width="40"/>
-                    <rect x="12" y="91" width="110" height="98" fill="url(#paint0_linear_0_1)"/>
-                    <defs>
-                        <filter id="filter0_d_0_1" x="2" y="0" width="263" height="273" filterUnits="userSpaceOnUse"
-                                color-interpolation-filters="sRGB">
-                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                            <feColorMatrix in="SourceAlpha" type="matrix"
-                                           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                            <feMorphology radius="2" operator="dilate" in="SourceAlpha"
-                                          result="effect1_dropShadow_0_1"/>
-                            <feOffset dx="2" dy="5"/>
-                            <feGaussianBlur stdDeviation="5"/>
-                            <feComposite in2="hardAlpha" operator="out"/>
-                            <feColorMatrix type="matrix"
-                                           values="0 0 0 0 0.0941176 0 0 0 0 0.0666667 0 0 0 0 0.0745098 0 0 0 0.25 0"/>
-                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
-                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
-                        </filter>
-                        <linearGradient id="paint0_linear_0_1" x1="12" y1="190" x2="121" y2="94"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#D41CA3"/>
-                            <stop offset="1" stop-color="#D41C4B"/>
-                        </linearGradient>
-                    </defs>
-                </svg>
-                <h2 style="font-family: Poppins; transform: skewX(-10deg)"
-                    class="text-[#181113] text-xl font-semibold leading-tight">
-                    TourneyBit</h2>
-            </div>
-            <div class="flex flex-1 justify-end gap-8">
-                <div class="flex items-center gap-9">
-                    <a class="text-[#181113] text-sm font-medium leading-normal" href="#">Features</a>
-                    <a class="text-[#181113] text-sm font-medium leading-normal" href="#">Pricing</a>
-                </div>
-                <div class="flex gap-2">
-                    <button
-                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f5f0f1] text-[#181113] text-sm font-bold leading-normal tracking-[0.015em]"
-                    >
-                        <span class="truncate">Book A Demo</span>
-                    </button>
-                </div>
-            </div>
-        </header>
-        <div class="flex flex-1 justify-center">
-            <div class="layout-content-container flex flex-col flex-1">
-                <div class="@container">
-                    <div>
-                        <div
-                                class="flex min-h-[92dvh] min-h-[calc(100dvh-65px)] flex-col gap-8 bg-cover bg-center bg-no-repeat items-center justify-center p-4 bg-[#181113] shadow-md relative"
-                                style='background-image: linear-gradient(rgba(24, 17, 19, 0.85) 0%, rgba(24, 17, 19, 0.3) 100%), url("/img/banner-image.jpg");'
-                        >
-                            <div class="flex flex-col gap-2 text-center">
-                                <h1
-                                        style='font-family: Poppins, sans-serif'
-                                        class="text-[#fffefe] text-5xl font-bold leading-tight tracking-tight"
-                                >
-                                    The <span class="inline-block" style="transform: skewX(-5deg)">only</span> <abbr
-                                        class="no-underline border-none"
-                                        title="Bring Your Own Cloud">BYOC</abbr> competition platform
-                                </h1>
-                                <h2 class="text-[#fffefe] text-base font-normal leading-normal">
-                                    <strong class="font-medium">Your brand</strong>. <strong class="font-medium">Your
-                                    <abbr class="no-underline border-none" title="Single Sign-On">SSO</abbr></strong>.
-                                    <strong class="font-medium">Your cloud</strong>. Don't just run your competition.
-                                    <strong
-                                            class="font-medium">Own your competition</strong> with <strong
-                                        class="font-medium">TourneyBit</strong>.
-                                </h2>
-                            </div>
-                            <button
-                                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-[#eb0537] text-[#fffefe] text-base font-bold leading-normal tracking-[0.015em]"
-                            >
-                                <span class="truncate">Show Me</span>
-                            </button>
-                            <canvas class="absolute bottom-0 w-full h-48 opacity-35" id="sparkles"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <section class="mx-8 mt-8 mb-10">
-                    <h2 class="text-[#181113] text-4xl font-bold leading-tight px-4 pb-3 pt-5 mb-3">
-                        Competition management,<br>
-                        built for the sports and esports industries <br><strong
-                            class="font-bold underline decoration-[#eb0537]">from the ground up</strong></h2>
-                    <div class="grid grid-cols-2 gap-3 p-4">
-                        <div class="mb-3 sm:mb-0 flex flex-1 gap-3 rounded-lg border border-[#a8adc0] bg-[#f2f3f6] text-[#181113] p-8 flex-col shadow-xl">
-                            <div>
-                                <!-- cog-8-tooth icon from https://heroicons.com -->
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-14">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                          d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.559.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.894.149c-.424.07-.764.383-.929.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.398.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.272-.806.108-1.204-.165-.397-.506-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.108-1.204l-.526-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894Z"/>
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                          d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
-                                </svg>
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <h2 class="text-2xl font-semibold leading-tight mb-2">Built to <strong
-                                        class="font-bold">integrate</strong></h2>
-                                <ul>
-                                    <li>Integrate with your existing SSO provider and IT infrastructure</li>
-                                    <li>Fully white-label the platform with your brand</li>
-                                    <li>Customize settings and software modules to fit your operations</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="mb-3 sm:mb-0 flex flex-1 gap-3 rounded-lg border border-[#a8adc0] bg-[#f2f3f6] text-[#181113] p-8 flex-col shadow-xl">
-                            <div>
-                                <!-- shield-check icon from https://heroicons.com -->
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke-width="1.5" stroke="currentColor" class="size-14">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                          d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/>
-                                </svg>
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <h2 class="text-2xl font-semibold leading-tight mb-2">Built to <strong
-                                        class="font-bold">comply</strong></h2>
-                                <ul>
-                                    <li>Protect <strong class="font-medium">your data</strong> in your own cloud or
-                                        corporate network
-                                    </li>
-                                    <li>Eliminate sub-processor risk and complexity</li>
-                                    <li>Comply without tradeoffs with a simple deployment process</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="ml-8 mr-4 pr-4 mt-4 mb-4 bg-[#181113] py-16 shadow-xl z-10">
-                    <div class="mb-3 sm:mb-0 flex flex-1 gap-3 p-4 flex-col">
-                        <div class="flex flex-row gap-16 p-8 items-center">
-                            <h2 class="text-4xl text-white font-bold leading-tight text-md min-w-[520px]">Unlock revenue
-                                streams<br> you didn't even know existed</h2>
-                            <ul class="text-white text-2xl gap-3 flex flex-col font-medium">
-                                <li>Add more revenue from your existing customers</li>
-                                <li>Increase <abbr class="no-underline border-none"
-                                                   title="average order value">AOV</abbr> of new sales
-                                </li>
-                                <li class="font-bold">Unlock new revenue at a fraction of the cost of rolling your own
-                                    competition management solution
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                <style>
-                    .background-bracket {
-                        background-blend-mode: color-dodge;
-                        background-image: url(/img/bracket.webp);
-                        background-position-x: right;
-                        background-position-y: bottom;
-                        background-repeat: repeat;
-                        background-size: 360px;
-                    }
-                </style>
-                <div class="@container bg-[#8000e5] shadow-md -mt-8 background-bracket">
-                    <div class="flex flex-col justify-end gap-8 px-4 py-48">
-                        <div class="flex flex-col gap-2 text-center">
-                            <h1
-                                    class="text-5xl text-[#fffefe] tracking-light font-bold leading-tight"
-                            >
-                                Ready for a new way to compete?
-                            </h1>
-                            <p class="text-[#fffefe] text-base font-normal leading-normal">
-                                <strong class="font-medium">Book a demo today</strong>
-                                and start your journey to becoming a <strong class="font-medium">champion
-                                among your competition</strong>.</p>
-                        </div>
-                        <div class="flex flex-1 justify-center">
-                            <div class="flex justify-center">
-                                <button
-                                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#eb0537] text-[#fffefe] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow"
-                                >
-                                    <span class="truncate">Book a Demo</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<body style="font-family: 'Poppins', sans-serif;"
+      class="relative flex size-full min-h-screen flex-col bg-white overflow-x-hidden">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f5f0f1] px-2 sm:px-10 py-3">
+    <div class="flex items-center gap-2 text-[#181113] cursor-default">
+        <img class="size-6" alt="TourneyBit Logo" src="/images/TourneyBit-Logo.svg">
+        <div style="font-family: 'Poppins', sans-serif; transform: skewX(-10deg)"
+             class="text-[#181113] text-xl font-semibold leading-tight">
+            TourneyBit
         </div>
-        <footer class="text-[#181113] bg-[#fffefe] mt-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 max-w-lg md:max-w-6xl px-4 py-2 mb-8 mx-auto">
-                <div class="block text-sm order-last sm:order-first">
-                    <div class="flex items-center gap-2 text-[#181113] mb-4 cursor-default">
-                        <svg class="size-6" xmlns="http://www.w3.org/2000/svg" width="265" height="273"
-                             viewBox="0 0 265 273"
-                             fill="none">
-                            <rect width="265" height="273" fill="#FFFEFE"/>
-                            <g filter="url(#filter0_d_0_1)">
-                                <rect x="12" y="7" width="239" height="249" fill="#181113"/>
-                            </g>
-                            <path d="M0.5 70.8333L162 70.8333" stroke="#FFFEFE" stroke-width="40"/>
-                            <line x1="142.003" y1="212.003" x2="142.003" y2="62" stroke="#FFFEFE" stroke-width="40"/>
-                            <path d="M1 205.917H162" stroke="#FFFEFE" stroke-width="40"/>
-                            <line x1="124.997" y1="141.5" x2="199.997" y2="141.5" stroke="#FFFEFE" stroke-width="40"/>
-                            <rect x="12" y="91" width="110" height="98" fill="url(#paint0_linear_0_1)"/>
-                            <defs>
-                                <filter id="filter0_d_0_1" x="2" y="0" width="263" height="273"
-                                        filterUnits="userSpaceOnUse"
-                                        color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                    <feColorMatrix in="SourceAlpha" type="matrix"
-                                                   values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                                   result="hardAlpha"/>
-                                    <feMorphology radius="2" operator="dilate" in="SourceAlpha"
-                                                  result="effect1_dropShadow_0_1"/>
-                                    <feOffset dx="2" dy="5"/>
-                                    <feGaussianBlur stdDeviation="5"/>
-                                    <feComposite in2="hardAlpha" operator="out"/>
-                                    <feColorMatrix type="matrix"
-                                                   values="0 0 0 0 0.0941176 0 0 0 0 0.0666667 0 0 0 0 0.0745098 0 0 0 0.25 0"/>
-                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
-                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1"
-                                             result="shape"/>
-                                </filter>
-                                <linearGradient id="paint0_linear_0_1" x1="12" y1="190" x2="121" y2="94"
-                                                gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#D41CA3"/>
-                                    <stop offset="1" stop-color="#D41C4B"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                        <h2 style="font-family: Poppins; transform: skewX(-10deg)"
-                            class="text-[#181113] text-xl font-semibold leading-tight">
-                            TourneyBit</h2>
-                    </div>
-                    <nav class="text-[#181113] text-sm font-medium leading-normal">
-                        <a title="Contact Us"
-                           class="table mb-2 sm:mb-1 py-1"
-                           href="/features">Features</a>
-                        <a title="Blog"
-                           class="table mb-2 sm:mb-1 py-1"
-                           href="/blog">Blog</a>
-                        <a title="Privacy Policy" class="table mb-2 sm:mb-1 py-1"
-                           href="/policies/privacy-policy">Privacy Policy</a>
-                        <a title="Terms of Use"
-                           class="table mb-2 sm:mb-1 py-1"
-                           href="/policies/terms-of-use">Terms of Use</a></nav>
-                </div>
-                <section
-                        class="flex flex-col md:items-end order-first mb-12 sm:order-last mt-8 sm:mt-0 sm:mb-0 self-center">
-                    <div class="text-center">
-                        <span class="text-base block mb-2 w-full">Need help? Want to chat? Something else?</span>
-                        <div class="flex flex-column items-center justify-center">
-                            <a
-                                    title="Contact Us"
-                                    aria-label="Contact TourneyBit Support"
-                                    class="flex w-fit min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f5f0f1] text-[#181113] text-sm font-bold leading-normal tracking-[0.015em]"
-                                    href="mailto:hello@tourneybit.com">Contact Us</a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <section class="text-center text-sm w-full mt-2 mb-4 sm:mb-2" aria-roledescription="Copyright Notice">©
-                TourneyBit LLC 2025. All rights reserved.
-            </section>
-        </footer>
     </div>
-</div>
+    <nav class="flex flex-1 justify-end gap-8">
+        <div class="flex items-center gap-9 sr-only sm:not-sr-only">
+            <a class="text-[#181113] text-sm font-medium leading-normal" href="/features">Features</a>
+            <a class="text-[#181113] text-sm font-medium leading-normal" href="/pricing">Pricing</a>
+        </div>
+        <div class="flex gap-2">
+            <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f5f0f1] text-[#181113] text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+                <span class="truncate">Book A Demo</span>
+            </button>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="flex flex-col">
+        <div
+                class="flex min-h-[92dvh] min-h-[calc(100dvh-65px)] flex-col gap-8 bg-cover bg-center bg-no-repeat items-center justify-center p-4 bg-[#181113] shadow-md relative"
+                style='background-image: linear-gradient(rgba(24, 17, 19, 0.85) 0%, rgba(24, 17, 19, 0.3) 100%), url("/images/banner-image.webp");'
+        >
+            <div class="flex flex-col gap-2 text-center">
+                <h1
+                        style="font-family: 'Poppins', sans-serif"
+                        class="fade-in-long text-[#fffefe] text-4xl sm:text-5xl font-bold leading-tight tracking-tight mb-2 lg:mb-0"
+                >
+                    The <span class="inline-block" style="transform: skewX(-5deg)">only</span> <abbr
+                        class="no-underline border-none"
+                        title="Bring Your Own Cloud">BYOC</abbr> competition platform
+                </h1>
+                <p class="text-[#fffefe] text-base font-normal leading-normal flex flex-col items-center lg:flex-row lg:justify-center w-full">
+                    <span class="text-lg lg:text-base">
+                        <span style="animation-delay: 1s" class="fade-in">
+                            <strong class="font-medium">Your brand</strong>.
+                        </span>
+                        <span style="animation-delay: 1.75s" class="fade-in">
+                            <strong class="font-medium">Your
+                            <abbr class="no-underline border-none"
+                                  title="Single Sign-On">SSO</abbr></strong>.
+                        </span>
+                        <span style="animation-delay: 2.5s" class="fade-in">
+                            <strong class="font-medium">Your cloud</strong>.
+                        </span>
+                    </span>
+                    <span style="animation-delay: 3.5s" class="reveal mt-2 lg:mt-0 text-base">
+                                            Don't just <span class="inline-block"
+                                                             style="transform: skewX(-5deg)">run</span> your competition.
+                                    </span>
+                    <span style="animation-delay: 4.75s" class="reveal-next text-base">
+                                             <strong class="font-medium">Own your competition</strong> with <strong
+                            class="font-medium">TourneyBit</strong>.
+                                    </span>
+                </p>
+            </div>
+            <button
+                    style="animation-delay: 5.75s"
+                    class="scale flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-[#eb0537] text-[#fffefe] text-base font-bold leading-normal tracking-[0.015em]"
+            >
+                <span class="truncate">Show Me</span>
+            </button>
+            <canvas class="absolute bottom-0 w-full h-48 opacity-35" id="sparkles"></canvas>
+        </div>
+        <section class="mx-2 sm:mx-8 mt-8 mb-10">
+            <h2 class="text-[#181113] text-3xl sm:text-4xl font-bold leading-tight px-4 pb-3 pt-5 mb-3">
+                Competition management,<br>
+                built for the sports and esports industries <br><strong
+                    class="font-bold underline decoration-[#eb0537]">from the ground up</strong></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4">
+                <div class="mb-3 sm:mb-0 flex flex-1 gap-3 rounded-lg border border-[#a8adc0] bg-[#f2f3f6] text-[#181113] p-8 flex-col shadow-xl scale-slight">
+                    <div>
+                        <!-- cog-8-tooth icon from https://heroicons.com -->
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                             viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10 sm:size-14">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.559.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.894.149c-.424.07-.764.383-.929.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.398.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.272-.806.108-1.204-.165-.397-.506-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.108-1.204l-.526-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894Z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="text-2xl font-semibold leading-tight mb-2">Built to <strong
+                                class="font-bold">integrate</strong></h3>
+                        <ul class="gap-1 flex flex-col">
+                            <li>Integrate with your existing SSO provider and IT infrastructure</li>
+                            <li>Fully white-label the platform with your brand</li>
+                            <li>Customize settings and software modules to fit your operations</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mb-3 sm:mb-0 flex flex-1 gap-3 rounded-lg border border-[#a8adc0] bg-[#f2f3f6] text-[#181113] p-8 flex-col shadow-xl scale-slight">
+                    <div>
+                        <!-- shield-check icon from https://heroicons.com -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                             stroke-width="1.5" stroke="currentColor" class="size-10 sm:size-14">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="text-2xl font-semibold leading-tight mb-2">Built to <strong
+                                class="font-bold">comply</strong></h3>
+                        <ul class="gap-1 flex flex-col">
+                            <li>Protect <strong class="font-medium">your data</strong> in your own cloud or
+                                corporate network
+                            </li>
+                            <li>Eliminate sub-processor risk and complexity</li>
+                            <li>Comply without tradeoffs with a simple deployment process</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ml-6 sm:ml-8 mr-4 pr-4 mt-4 mb-4 bg-[#181113] py-16 shadow-xl z-10">
+            <div class="mb-3 sm:mb-0 flex flex-1 gap-3 p-4 flex-col">
+                <div class="flex flex-col md:flex-row gap-16 p-4 sm:p-8 md:items-center">
+                    <h2 class="text-4xl text-white font-bold leading-tight text-md md:text-3xl lg:text-4xl md:min-w-[380px] lg:min-w-[520px]">
+                        Unlock revenue
+                        streams<br> you didn't even know existed</h2>
+                    <ul class="text-white text-xl sm:text-2xl gap-3 flex flex-col font-medium">
+                        <li>Add more revenue from your existing customers</li>
+                        <li>Increase <abbr class="no-underline border-none"
+                                           title="average order value">AOV</abbr> of new sales
+                        </li>
+                        <li class="font-bold">Unlock new revenue at a fraction of the cost of rolling your own
+                            competition management solution
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#8000e5] shadow-md -mt-8 background-bracket">
+            <div class="flex flex-col justify-end gap-8 px-4 py-48">
+                <div class="flex flex-col gap-2 text-center">
+                    <h2
+                            class="text-4xl text-[#fffefe] tracking-light font-bold leading-tight"
+                    >
+                        Ready for a new way to compete?
+                    </h2>
+                    <p class="text-[#fffefe] text-base font-normal leading-normal">
+                        <strong class="font-medium">Book a demo today</strong>
+                        and start your journey to becoming a <strong class="font-medium">champion
+                        among your competition</strong>.</p>
+                </div>
+                <div class="flex flex-1 justify-center">
+                    <div class="flex justify-center">
+                        <button
+                                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#eb0537] text-[#fffefe] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow"
+                        >
+                            <span class="truncate">Book a Demo</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<footer class="text-[#181113] bg-[#fffefe] mt-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 max-w-lg md:max-w-6xl px-4 py-2 mb-8 mx-auto">
+        <section class="block text-sm order-last sm:order-first">
+            <div class="flex items-center gap-2 text-[#181113] mb-4 cursor-default">
+                <img class="size-6" alt="TourneyBit Logo" src="/images/TourneyBit-Logo.svg">
+                <div style="font-family: 'Poppins', sans-serif; transform: skewX(-10deg)"
+                     class="text-[#181113] text-xl font-semibold leading-tight">
+                    TourneyBit
+                </div>
+            </div>
+            <nav class="text-[#181113] text-sm font-medium leading-normal">
+                <a title="Features"
+                   class="table mb-2 sm:mb-1 py-1"
+                   href="/features">Features</a>
+                <a title="Pricing"
+                   class="table mb-2 sm:mb-1 py-1"
+                   href="/pricing">Pricing</a>
+                <a title="Blog"
+                   class="table mb-2 sm:mb-1 py-1"
+                   href="/blog">Blog</a>
+                <a title="Privacy Policy" class="table mb-2 sm:mb-1 py-1"
+                   href="/policies/privacy-policy">Privacy Policy</a>
+                <a title="Terms of Use"
+                   class="table mb-2 sm:mb-1 py-1"
+                   href="/policies/terms-of-use">Terms of Use</a></nav>
+        </section>
+        <section
+                class="flex flex-col md:items-end order-first mb-24 sm:order-last mt-8 sm:mt-0 sm:mb-0 self-center">
+            <div class="text-center">
+                <span class="text-base block mb-2 w-full">Need help? Want to chat? Something else?</span>
+                <div class="flex flex-column items-center justify-center">
+                    <a
+                            title="Contact Us"
+                            aria-label="Contact TourneyBit Support"
+                            class="button flex w-fit min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f5f0f1] text-[#181113] text-sm font-bold leading-normal tracking-[0.015em]"
+                            href="mailto:hello@tourneybit.com">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="text-center text-sm w-full mt-16 mb-4 sm:mb-2" aria-roledescription="Copyright Notice">&copy;
+        TourneyBit LLC 2025. All rights reserved.
+    </section>
+</footer>
 <script type="module">
     import confetti from "https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.module.mjs";
 
