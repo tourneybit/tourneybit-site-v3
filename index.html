@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta name="charset" content="UTF-8"/>
-    <meta http-equiv="content-security-policy" content="default-src 'self'; script-src 'self' 'inline-speculation-rules' 'unsafe-inline' static.cloudflareinsights.com cdn.jsdelivr.net; connect-src 'self' static.cloudflareinsights.com fonts.gstatic.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com fonts.googleapis.com; worker-src blob:; upgrade-insecure-requests; base-uri 'self'">
+    <meta http-equiv="content-security-policy"
+          content="default-src 'self'; script-src 'self' 'inline-speculation-rules' 'unsafe-inline' static.cloudflareinsights.com cdn.jsdelivr.net; connect-src 'self' static.cloudflareinsights.com fonts.gstatic.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com fonts.googleapis.com; worker-src blob:; upgrade-insecure-requests; base-uri 'self'">
     <meta http-equiv="default-style" content="/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="canonical" href="https://www.tourneybit.com/">
@@ -64,24 +65,27 @@
 <body style="font-family: 'Poppins', sans-serif;"
       class="relative flex size-full min-h-screen flex-col bg-white overflow-x-hidden">
 <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f5f0f1] px-2 sm:px-10 py-3">
-    <div class="flex items-center gap-2 text-[#181113] cursor-default">
+    <a href="/" aria-label="Homepage" class="flex items-center gap-2 text-[#181113]">
         <img class="size-6" alt="TourneyBit Logo" src="/images/TourneyBit-Logo.svg">
         <div style="font-family: 'Poppins', sans-serif; transform: skewX(-10deg)"
              class="text-[#181113] text-xl font-semibold leading-tight">
             TourneyBit
         </div>
-    </div>
-    <nav class="flex flex-1 justify-end gap-8">
-        <div class="flex items-center gap-9 sr-only sm:not-sr-only">
-            <a class="text-[#181113] text-sm font-medium leading-normal" href="/features">Features</a>
-            <a class="text-[#181113] text-sm font-medium leading-normal" href="/pricing">Pricing</a>
+    </a>
+    <nav class="flex flex-1 justify-end gap-4 sm:gap-8">
+        <div class="flex items-center gap-9 max-[400px]:sr-only">
+            <a class="text-[#181113] text-sm font-medium leading-normal"
+               title="Email hello@tourneybit.com"
+               href="mailto:hello@tourneybit.com">Contact</a>
         </div>
         <div class="flex gap-2">
-            <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f5f0f1] text-[#181113] text-sm font-bold leading-normal tracking-[0.015em]"
+            <a
+                    title="Show me how TourneyBit can help my organization"
+                    href="/book-a-demo"
+                    class="button flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f5f0f1] text-[#181113] text-sm font-bold leading-normal tracking-[0.015em]"
             >
-                <span class="truncate">Book A Demo</span>
-            </button>
+                Book A Demo
+            </a>
         </div>
     </nav>
 </header>
@@ -91,7 +95,7 @@
                 class="flex min-h-[92dvh] min-h-[calc(100dvh-65px)] flex-col gap-8 bg-cover bg-center bg-no-repeat items-center justify-center p-4 bg-[#181113] shadow-md relative"
                 style='background-image: linear-gradient(rgba(24, 17, 19, 0.85) 0%, rgba(24, 17, 19, 0.3) 100%), url("/images/banner-image.webp");'
         >
-            <div class="flex flex-col gap-2 text-center">
+            <div class="flex flex-col gap-2 text-center z-10">
                 <h1
                         style="font-family: 'Poppins', sans-serif"
                         class="fade-in-long text-[#fffefe] text-4xl sm:text-5xl font-bold leading-tight tracking-tight mb-2 lg:mb-0"
@@ -125,10 +129,11 @@
                 </p>
             </div>
             <button
+                    title="Book a demo and show me how TourneyBit can help my organization"
                     style="animation-delay: 5.75s"
-                    class="scale flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-[#eb0537] text-[#fffefe] text-base font-bold leading-normal tracking-[0.015em]"
+                    class="z-10 scale flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-[#eb0537] text-[#fffefe] text-base font-bold leading-normal tracking-[0.015em]"
             >
-                <span class="truncate">Show Me</span>
+                Show Me
             </button>
             <canvas class="absolute bottom-0 w-full h-48 opacity-35" id="sparkles"></canvas>
         </div>
@@ -217,9 +222,10 @@
                 <div class="flex flex-1 justify-center">
                     <div class="flex justify-center">
                         <button
+                                title="Book a demo and become a champion with TourneyBit!"
                                 class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#eb0537] text-[#fffefe] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow"
                         >
-                            <span class="truncate">Book a Demo</span>
+                            Book a Demo
                         </button>
                     </div>
                 </div>
@@ -229,29 +235,30 @@
 </main>
 <footer class="text-[#181113] bg-[#fffefe] mt-20">
     <div class="grid grid-cols-1 sm:grid-cols-2 max-w-lg md:max-w-6xl px-4 py-2 mb-8 mx-auto">
-        <section class="block text-sm order-last sm:order-first">
-            <div class="flex items-center gap-2 text-[#181113] mb-4 cursor-default">
+        <section class="block text-sm order-last sm:order-first z-10">
+            <a href="/" aria-label="Homepage" class="flex items-center gap-2 text-[#181113] mb-4">
                 <img class="size-6" alt="TourneyBit Logo" src="/images/TourneyBit-Logo.svg">
                 <div style="font-family: 'Poppins', sans-serif; transform: skewX(-10deg)"
                      class="text-[#181113] text-xl font-semibold leading-tight">
                     TourneyBit
                 </div>
-            </div>
+            </a>
             <nav class="text-[#181113] text-sm font-medium leading-normal">
-                <a title="Features"
+                <a title="About"
                    class="table mb-2 sm:mb-1 py-1"
-                   href="/features">Features</a>
-                <a title="Pricing"
-                   class="table mb-2 sm:mb-1 py-1"
-                   href="/pricing">Pricing</a>
+                   href="/about">About</a>
                 <a title="Blog"
                    class="table mb-2 sm:mb-1 py-1"
                    href="/blog">Blog</a>
+                <a title="Book a demo"
+                   class="table mb-2 sm:mb-1 py-1"
+                   href="/book-a-demo">Book a Demo</a>
                 <a title="Privacy Policy" class="table mb-2 sm:mb-1 py-1"
-                   href="/policies/privacy-policy">Privacy Policy</a>
+                   href="/privacy">Privacy Policy</a>
                 <a title="Terms of Use"
                    class="table mb-2 sm:mb-1 py-1"
-                   href="/policies/terms-of-use">Terms of Use</a></nav>
+                   href="/terms">Terms of Use</a>
+            </nav>
         </section>
         <section
                 class="flex flex-col md:items-end order-first mb-24 sm:order-last mt-8 sm:mt-0 sm:mb-0 self-center">
@@ -259,8 +266,7 @@
                 <span class="text-base block mb-2 w-full">Need help? Want to chat? Something else?</span>
                 <div class="flex flex-column items-center justify-center">
                     <a
-                            title="Contact Us"
-                            aria-label="Contact TourneyBit Support"
+                            title="Contact TourneyBit"
                             class="button flex w-fit min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f5f0f1] text-[#181113] text-sm font-bold leading-normal tracking-[0.015em]"
                             href="mailto:hello@tourneybit.com">Contact Us</a>
                 </div>
