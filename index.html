@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta name="charset" content="UTF-8"/>
+    <meta http-equiv="content-security-policy" content="default-src 'self'; script-src 'self' 'inline-speculation-rules' 'unsafe-inline' static.cloudflareinsights.com cdn.jsdelivr.net; connect-src 'self' static.cloudflareinsights.com fonts.gstatic.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com fonts.googleapis.com; worker-src blob:; upgrade-insecure-requests; base-uri 'self'">
+    <meta http-equiv="default-style" content="/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="canonical" href="https://www.tourneybit.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""/>
     <link
             rel="stylesheet"
@@ -15,9 +18,8 @@
           content="Run your competitions and sporting events with the competition and events platform designed from the ground up for the sports and esports industries. Deploy our secure and integration-ready BYOC platform to your own infrastructure with your own branding and customizations. Book a demo today and own your competition with TourneyBit!"/>
     <meta name="og:site_name" content="TourneyBit"/>
     <meta property="og:type" content="website"/>
-    <!-- TODO -->
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+    <link rel="stylesheet" href="/css/style.css"/>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -40,105 +42,24 @@
         }
     </script>
     <style>
-        @media screen and (prefers-reduced-motion: no-preference) {
-            @keyframes fade-in {
-                to {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-            }
-
-            .fade-in-long {
-                opacity: 0;
-                transform: translateY(10px);
-                animation: fade-in 0.65s ease-out forwards;
-                display: inline-block;
-            }
-
-            .fade-in {
-                opacity: 0;
-                transform: translateY(5px);
-                animation: fade-in 0.5s ease-out forwards;
-                display: inline-block;
-            }
-
-            @keyframes reveal {
-                0% {
-                    opacity: 0.95;
-                }
-                to {
-                    opacity: 1;
-                    max-width: 32ch;
-                    display: inline;
-                }
-            }
-
-            .reveal, .reveal-next {
-                opacity: 0;
-                max-width: 1px;
-                white-space: nowrap;
-                overflow: hidden;
-                margin-left: 5px;
-            }
-
-            .reveal {
-                animation: reveal 1s linear forwards;
-            }
-
-            @keyframes reveal-next {
-                0% {
-                    opacity: 0.95;
-                }
-                to {
-                    opacity: 1;
-                    max-width: 37ch;
-                    display: inline;
-                }
-            }
-
-            .reveal-next {
-                animation: reveal-next 1s linear forwards;
-            }
-
-            @keyframes scale {
-                0%, 100% {
-                    transform: none;
-                }
-                50% {
-                    transform: scale(1.03);
-                }
-            }
-
-            .scale {
-                animation: scale 1s ease-in-out;
-            }
-
-            a.button, button {
-                transition: transform 0.25s ease-in-out;
-            }
-
-            a.button:hover, button:hover {
-                transform: scale(1.03);
-            }
-
-            .scale-slight {
-                transition: transform 0.25s ease-in-out;
-            }
-
-            .scale-slight:active, .scale-slight:hover {
-                transform: scale(1.01);
-            }
-        }
-
         .background-bracket {
-            background-blend-mode: color-dodge;
             background-image: url(/images/bracket.webp);
-            background-position-x: right;
-            background-position-y: bottom;
-            background-repeat: repeat;
-            background-size: 360px;
         }
     </style>
+    <noscript>
+        <style>
+            .scroll-fade {
+                opacity: 1;
+                transform: translateY(0);
+                transition-delay: 0s !important;
+            }
+
+            .scroll-slide {
+                overflow-x: unset;
+                transform: unset;
+            }
+        </style>
+    </noscript>
 </head>
 <body style="font-family: 'Poppins', sans-serif;"
       class="relative flex size-full min-h-screen flex-col bg-white overflow-x-hidden">
@@ -165,7 +86,7 @@
     </nav>
 </header>
 <main>
-    <div class="flex flex-col">
+    <div class="flex flex-col overflow-x-hidden">
         <div
                 class="flex min-h-[92dvh] min-h-[calc(100dvh-65px)] flex-col gap-8 bg-cover bg-center bg-no-repeat items-center justify-center p-4 bg-[#181113] shadow-md relative"
                 style='background-image: linear-gradient(rgba(24, 17, 19, 0.85) 0%, rgba(24, 17, 19, 0.3) 100%), url("/images/banner-image.webp");'
@@ -212,12 +133,12 @@
             <canvas class="absolute bottom-0 w-full h-48 opacity-35" id="sparkles"></canvas>
         </div>
         <section class="mx-2 sm:mx-8 mt-8 mb-10">
-            <h2 class="text-[#181113] text-3xl sm:text-4xl font-bold leading-tight px-4 pb-3 pt-5 mb-3">
+            <h2 class="text-[#181113] text-3xl sm:text-4xl font-bold leading-tight px-4 pb-3 pt-5 mb-3 scroll-fade">
                 Competition management,<br>
                 built for the sports and esports industries <br><strong
                     class="font-bold underline decoration-[#eb0537]">from the ground up</strong></h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4">
-                <div class="mb-3 sm:mb-0 flex flex-1 gap-3 rounded-lg border border-[#a8adc0] bg-[#f2f3f6] text-[#181113] p-8 flex-col shadow-xl scale-slight">
+                <div class="mb-3 sm:mb-0 flex flex-1 gap-3 rounded-lg border border-[#a8adc0] bg-[#f2f3f6] text-[#181113] p-8 flex-col shadow-xl scroll-fade scale-slight">
                     <div>
                         <!-- cog-8-tooth icon from https://heroicons.com -->
                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -238,7 +159,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="mb-3 sm:mb-0 flex flex-1 gap-3 rounded-lg border border-[#a8adc0] bg-[#f2f3f6] text-[#181113] p-8 flex-col shadow-xl scale-slight">
+                <div style="transition-delay: 0.25s"
+                     class="mb-3 sm:mb-0 flex flex-1 gap-3 rounded-lg border border-[#a8adc0] bg-[#f2f3f6] text-[#181113] p-8 flex-col shadow-xl scroll-fade scale-slight">
                     <div>
                         <!-- shield-check icon from https://heroicons.com -->
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -261,7 +183,7 @@
                 </div>
             </div>
         </section>
-        <section class="ml-6 sm:ml-8 mr-4 pr-4 mt-4 mb-4 bg-[#181113] py-16 shadow-xl z-10">
+        <section class="ml-6 sm:ml-8 mr-4 pr-4 mt-4 mb-4 bg-[#181113] py-16 shadow-xl z-10 scroll-slide">
             <div class="mb-3 sm:mb-0 flex flex-1 gap-3 p-4 flex-col">
                 <div class="flex flex-col md:flex-row gap-16 p-4 sm:p-8 md:items-center">
                     <h2 class="text-4xl text-white font-bold leading-tight text-md md:text-3xl lg:text-4xl md:min-w-[380px] lg:min-w-[520px]">
@@ -281,7 +203,7 @@
         </section>
         <section class="bg-[#8000e5] shadow-md -mt-8 background-bracket">
             <div class="flex flex-col justify-end gap-8 px-4 py-48">
-                <div class="flex flex-col gap-2 text-center">
+                <div class="flex flex-col gap-2 text-center scroll-fade">
                     <h2
                             class="text-4xl text-[#fffefe] tracking-light font-bold leading-tight"
                     >
@@ -395,6 +317,45 @@
         requestAnimationFrame(frame);
     };
     frame();
+</script>
+<script type="module">
+    document.addEventListener("DOMContentLoaded", () => {
+        const targets = document.querySelectorAll(".scroll-fade");
+
+        const callback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("scrolled");
+                    observer.unobserve(entry.target);
+                    if (entry.target.style.transitionDelay) {
+                        setTimeout(() => {
+                            entry.target.style.transitionDelay = "0s";
+                        }, 300);
+                    }
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(callback, {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.1,
+        });
+        targets.forEach(target => {
+            observer.observe(target);
+        });
+
+        const slideTargets = document.querySelectorAll(".scroll-slide");
+
+        const slideObserver = new IntersectionObserver(callback, {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.005,
+        });
+        slideTargets.forEach(target => {
+            slideObserver.observe(target);
+        });
+    });
 </script>
 </body>
 </html>
