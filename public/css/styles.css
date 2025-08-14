@@ -562,10 +562,6 @@
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
   }
-  .font-semibold {
-    --tw-font-weight: var(--font-weight-semibold);
-    font-weight: var(--font-weight-semibold);
-  }
   .tracking-\[0\.015em\] {
     --tw-tracking: 0.015em;
     letter-spacing: 0.015em;
