@@ -117,6 +117,19 @@
     background-image: url(/images/bracket.webp);
     background-position-x: right;
     background-position-y: bottom;
-    background-repeat: repeat;
     background-size: 360px;
+}
+
+@media all and (min-width: 768px) and (max-width: 1280px) and (pointer: coarse) {
+    .background-bracket {
+        background-blend-mode: lighten;
+        background-size: 116px;
+    }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1366px) and (orientation: landscape) and (pointer: coarse) {
+    .background-bracket {
+        background-blend-mode: lighten;
+        background-size: 116px;
+    }
 }
