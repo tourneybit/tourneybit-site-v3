@@ -34,11 +34,6 @@
                 transform: translateY(0);
                 transition-delay: 0s !important;
             }
-
-            .scroll-slide {
-                overflow-x: unset;
-                transform: unset;
-            }
         </style>
     </noscript>
 </head>
@@ -205,17 +200,6 @@
         });
         targets.forEach(target => {
             observer.observe(target);
-        });
-
-        const slideTargets = document.querySelectorAll(".scroll-slide");
-
-        const slideObserver = new IntersectionObserver(callback, {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.005,
-        });
-        slideTargets.forEach(target => {
-            slideObserver.observe(target);
         });
     });
 </script>

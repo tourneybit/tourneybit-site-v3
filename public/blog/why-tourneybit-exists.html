@@ -36,11 +36,6 @@
                 transform: translateY(0);
                 transition-delay: 0s !important;
             }
-
-            .scroll-slide {
-                overflow-x: unset;
-                transform: unset;
-            }
         </style>
     </noscript>
     <script type="application/ld+json">
@@ -173,10 +168,12 @@
                                     href="mailto:sales@tourneybit.com">sales@tourneybit.com</a>
                     or <a class="text-cyan-800 underline" href="/book-a-demo" title="Book a demo">book a demo</a>.
                 </p>
-                <span class="text-right mt-4 mb-4">- <address
-                        class="italic inline">Mike from TourneyBit</address></span>
+                <div class="inline text-right mt-4 mb-4">-
+                    <address
+                            class="italic inline">Mike from TourneyBit
+                    </address>
+                </div>
             </div>
-
         </article>
         <section class="bg-[#8000e5] shadow-md -mt-8 background-bracket">
             <div class="flex flex-col justify-end gap-8 px-4 py-48">
@@ -274,17 +271,6 @@
         });
         targets.forEach(target => {
             observer.observe(target);
-        });
-
-        const slideTargets = document.querySelectorAll(".scroll-slide");
-
-        const slideObserver = new IntersectionObserver(callback, {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.005,
-        });
-        slideTargets.forEach(target => {
-            slideObserver.observe(target);
         });
     });
 </script>
