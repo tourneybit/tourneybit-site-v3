@@ -32,7 +32,6 @@
     --text-5xl--line-height: 1;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
-    --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --tracking-tight: -0.025em;
     --leading-tight: 1.25;
@@ -849,6 +848,9 @@
       letter-spacing: 0.015em;
     }
   }
+}
+.background-banner {
+  background-image: linear-gradient(rgba(24, 17, 19, 0.85) 0%, rgba(24, 17, 19, 0.3) 100%), url("/images/banner-image.webp");
 }
 @media screen and (prefers-reduced-motion: no-preference) {
   @keyframes fade-in {
