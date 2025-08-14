@@ -309,11 +309,11 @@
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
-  .min-h-\[92dvh\] {
-    min-height: 92dvh;
+  .min-h-\[92svh\] {
+    min-height: 92svh;
   }
-  .min-h-\[calc\(100dvh-65px\)\] {
-    min-height: calc(100dvh - 65px);
+  .min-h-\[calc\(100svh-65px\)\] {
+    min-height: calc(100svh - 65px);
   }
   .min-h-screen {
     min-height: 100vh;
