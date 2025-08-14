@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="charset" content="UTF-8">
-    <meta http-equiv="content-security-policy"
-          content="default-src 'self'; script-src 'self' 'inline-speculation-rules' 'unsafe-inline' static.cloudflareinsights.com cdn.jsdelivr.net; connect-src 'self' static.cloudflareinsights.com fonts.gstatic.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com fonts.googleapis.com; worker-src blob:; upgrade-insecure-requests; base-uri 'self'">
-    <meta http-equiv="default-style" content="/css/styles.css">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://www.tourneybit.com/blog">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
@@ -50,6 +47,25 @@
             }
         </style>
     </noscript>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Blog",
+                    "item": "https://www.tourneybit.com/blog"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Why TourneyBit Exists"
+                }
+            ]
+        }
+    </script>
 </head>
 <body style="font-family: 'Poppins', sans-serif;"
       class="relative flex size-full min-h-screen flex-col bg-white overflow-x-hidden">
@@ -173,7 +189,7 @@
 </main>
 <footer class="text-[#181113] bg-[#fffefe] mt-20">
     <div class="grid grid-cols-1 sm:grid-cols-2 max-w-lg md:max-w-6xl px-4 py-2 mb-8 mx-auto">
-        <section class="block text-sm order-last sm:order-first z-10">
+        <div class="block text-sm order-last sm:order-first z-10">
             <a href="/" aria-label="Homepage" class="flex items-center gap-2 text-[#181113] mb-4">
                 <img class="size-6" alt="TourneyBit logo" src="/images/TourneyBit-Logo.svg">
                 <div style="font-family: 'Poppins', sans-serif; transform: skewX(-10deg)"
@@ -197,8 +213,8 @@
                    class="table mb-2 sm:mb-1 py-1"
                    href="/terms">Terms of Use</a>
             </nav>
-        </section>
-        <section
+        </div>
+        <div
                 class="flex flex-col md:items-end order-first mb-24 sm:order-last mt-8 sm:mt-0 sm:mb-0 self-center">
             <div class="text-center">
                 <span class="text-base block mb-2 w-full">Need help? Want to chat? Something else?</span>
@@ -209,11 +225,11 @@
                             href="mailto:hello@tourneybit.com">Contact Us</a>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
-    <section class="text-center text-sm w-full mt-16 mb-4 sm:mb-2" aria-roledescription="Copyright Notice">&copy;
-        TourneyBit LLC 2025. All rights reserved.
-    </section>
+    <small class="text-center text-sm w-full mt-16 mb-4 sm:mb-2" aria-roledescription="Copyright Notice">
+        &copy; TourneyBit LLC 2025. All rights reserved.
+    </small>
 </footer>
 <script type="module">
     document.addEventListener("DOMContentLoaded", () => {
