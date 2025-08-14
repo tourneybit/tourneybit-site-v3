@@ -684,9 +684,9 @@
       margin-bottom: calc(var(--spacing) * 1);
     }
   }
-  .sm\:mb-3 {
+  .sm\:mb-4 {
     @media (width >= 40rem) {
-      margin-bottom: calc(var(--spacing) * 3);
+      margin-bottom: calc(var(--spacing) * 4);
     }
   }
   .sm\:ml-8 {
