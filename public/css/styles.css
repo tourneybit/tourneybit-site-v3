@@ -308,6 +308,9 @@
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
+  .min-h-\[65px\] {
+    min-height: 65px;
+  }
   .min-h-\[92svh\] {
     min-height: 92svh;
   }
