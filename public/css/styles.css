@@ -629,6 +629,13 @@
     --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .before\:content-\[\'-_\'\] {
+    &::before {
+      content: var(--tw-content);
+      --tw-content: '- ';
+      content: var(--tw-content);
+    }
+  }
   .max-\[400px\]\:sr-only {
     @media (width < 400px) {
       position: absolute;
@@ -1077,6 +1084,11 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-content {
+  syntax: "*";
+  initial-value: "";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -1103,6 +1115,7 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-content: "";
     }
   }
 }
