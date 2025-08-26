@@ -201,6 +201,9 @@
   .absolute {
     position: absolute;
   }
+  .fixed {
+    position: fixed;
+  }
   .relative {
     position: relative;
   }
@@ -465,9 +468,6 @@
   }
   .bg-\[\#fffefe\] {
     background-color: #fffefe;
-  }
-  .bg-white {
-    background-color: var(--color-white);
   }
   .bg-cover {
     background-size: cover;
